@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application form</title>
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(192,2,2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(192,2,2);
+}
+</style>
+<body>
+    <a href="select course programr.html" button type="button" class="btn btn-danger"> <i class="fa-solid fa-arrow-left"></i>  BACK</a>
+    <div class="container-fluid mt-5 " style="background-color: gray;">
+ <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color: rgb(192,2,2); font-size: 50px;">Short Programe Application Form </h1>
+ 
+    </div>
+    <div class="container mt-5">
+        <h1>QALAMKAR SCHOOL&COLLEGE</h1>
+        <hr>
+        
+        
+        <form id="myForm">
+            <label for="fullName">Full Name (BLOCK LETTERS):</label>
+            <input type="text" id="fullName" name="fullName" required>
+        
+            <label for="fatherName">Father's Name (BLOCK LETTERS):</label>
+            <input type="text" id="fatherName" name="fatherName" required>
+        
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        
+            <label for="phone"> phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="address">Present Address:</label>
+            <textarea id="address" name="address" required></textarea>
+        
+            <label for="course">Course Selection:</label>
+            <select id="course" name="course">
+               
+                <option value="6-Month Calligraphy">6-Month Diploma Program</option>
+                <option value="3-Month Calligraphy">3-Month Diploma Program</option>
+            </select>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="container-fluid mt-5 text-center bg-dark">
+        <div class="row" style="color: #ccc; ">
+            <div class="col-md-12">
+                <p class="mb-0" style="margin-top: 20px;" >&copy; 2025 Qalamkar School & College. All rights reserved.</p>
+                <p>Website created by <b>Dildar Raza /Assad Khan /j.Roger</b> (Students of Aptech Learning Korangi)</p>
+            </div>
+        </div>
+    </div>
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="jquery-3.7.1.min.js"></script>
+<script src="loginlogic.js"></script>
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  
+</script>
+<script>
+    $(document).ready(function () {
+      $("#myForm").submit(function (event) {
+        event.preventDefault();
+  
+        var fullName = $("#fullName").val().trim();
+        var fatherName = $("#fatherName").val().trim();
+        var gender = $("#gender").val().trim();
+        var dob = $("#dob").val().trim();
+        var phone = $("#phone").val().trim();
+        var email = $("#email").val().trim();
+        var address = $("#address").val().trim();
+        var course = $("#course").val().trim();
+  
+       
+        if (
+          fullName === "" || fatherName === "" || gender === "" ||
+          dob === "" || phone === "" || email === "" ||
+          address === "" || course === ""
+        ) {
+          Swal.fire({
+            text: "Please fill in all fields: Full Name, Father Name, Gender, Date of Birth, Phone, Email, Address, and Course.",
+            icon: "warning",
+            confirmButtonText: "OK"
+          });
+          return;
+        }
+  
+       
+        localStorage.setItem("fullName", fullName);
+        localStorage.setItem("fatherName", fatherName);
+        localStorage.setItem("gender", gender);
+        localStorage.setItem("dob", dob);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("email", email);
+        localStorage.setItem("address", address);
+        localStorage.setItem("course", course);
+  
+        
+        Swal.fire({
+          text: "Your form has been successfully submitted. Kindly submit your documents to the institute and pay the admission fee to start your classes. Thank you.",
+          icon: "success",
+          confirmButtonText: "OK"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = 'index.html';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

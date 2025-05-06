@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Fonts for Calligraphy Look -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    body {
+      background-color: #fdfaf6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .registration-container {
+      max-width: 500px;
+      margin: 100px auto;
+      padding: 40px;
+      border: 2px solid #cbbcb1;
+      border-radius: 20px;
+      background-color: #fffaf3;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .registration-container:hover {
+      box-shadow: 0 10px 20px rgba(192,2,2);
+    }
+
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      
+      font-size: 48px;
+      color: rgb(192,2,2);
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      border-radius: 12px;
+      border: 1px solid #ddd0c8;
+      padding: 12px 15px;
+      background-color: #fefefe;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: #aa7b5e;
+      box-shadow: 0 0 5px rgba(170, 123, 94, 0.3);
+    }
+
+    .btn-info {
+      background-color: rgb(192,2,2);
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 12px;
+    }
+
+    .btn-info:hover {
+      background-color: rgb(192,2,2);
+    }
+
+    .navbar-brand img {
+      margin-left: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid bg-light">
+    <div class="registration-container" style="margin-bottom: 100px; margin-top: 100px;">
+      <div class="text-center mb-4">
+        <h1>Registration</h1>
+      </div>
+      <form id="REGISTRATION">
+        <div class="mb-3 position-relative">
+          <input type="email" class="form-control pe-5" placeholder="useremail" id="useremail" required>
+          <i class="fa-solid fa-envelope position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="mb-3 position-relative">
+          <input type="text" class="form-control pe-5" placeholder="Username" id="username" required>
+          <i class="fa-regular fa-user position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="mb-3 position-relative">
+          <input type="password" class="form-control" placeholder="Password" id="userpassword" required>
+          <i class="fa-solid fa-unlock position-absolute top-50 end-0 translate-middle-y me-3"></i>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-info text-white">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#REGISTRATION").submit(function (event) {
+        event.preventDefault();
+        var useremail=$("#useremail")
+        var username = $("#username").val();
+        var userpassword = $("#userpassword").val();
+
+        if (useremail == "" ||username === "" || userpassword === "") {
+          alert("Please enter both username and password.");
+        } else {
+          localStorage.setItem("username", username);
+          localStorage.setItem("password", userpassword);
+          alert("Registration successful!");
+          window.location.href = "signin.html";
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

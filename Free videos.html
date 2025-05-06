@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Courses</title>
+  <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+   
+    
+    
+    
+
+/* Enable nested dropdowns */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+}
+
+/* Show submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Optional: smoother appearance */
+.dropdown-menu {
+  transition: all 0.3s ease-in-out;
+} 
+.navbar ul li {
+  margin: 20px;
+}
+/* Remove default button styles */
+.dropdown .btn {
+  border: none;
+  background: transparent;
+
+  box-shadow: none;
+}
+
+/* Remove focus & active border on click */
+.dropdown .btn:focus,
+.dropdown .btn:active,
+.dropdown .btn.show {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent;
+ 
+}
+.navbar li a{
+  transition: 0.5s all linear;
+  border-radius: 7px;
+}
+.navbar li a:hover{
+  background-color: sandybrown;
+}
+        /* Reset and General Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+/* Card Section */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card p strong {
+    font-weight: bold;
+}
+
+
+
+
+
+
+    
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgb(192, 2, 2);" ... data-aos="fade-down"
+data-aos-duration="3000">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/logo2.png" alt="" width="120px" style="margin-right: 20px; background-color: rgb(192, 2, 2); ">
+
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0" >
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+       <!-- About Us Dropdown -->
+       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          About Us
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+
+          <!-- Introduction with Submenu -->
+          <li class="dropdown-submenu">
+            <div class="btn-group dropend">
+              <button type="button" class="btn ">
+                Introduction
+              </button>
+              <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropright</span>
+              </button>
+              <ul class="dropdown-menu">
+                <!-- Dropdown menu links -->
+              </ul>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="History.html">History</a></li>
+              <li><a class="dropdown-item" href="principal message.html">Principal's Message</a></li>
+              <li><a class="dropdown-item" href="mission vision .html">Vision & Mission</a></li>
+            </ul>
+          </li>
+          
+          
+          <!-- Organisation with Submenu -->
+          <li class="dropdown-submenu">
+            <div class="btn-group dropend">
+              <button type="button" class="btn ">
+                Organisation
+              </button>
+              <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropright</span>
+              </button>
+              <ul class="dropdown-menu">
+                <!-- Dropdown menu links -->
+              </ul>
+            </div>
+            <ul class="dropdown-menu">
+             
+              <li><a class="dropdown-item" href="Faculty&Staff.html">Faculty & Staff</a></li>
+              <li><a class="dropdown-item" href="Administration.html">Administration</a></li>
+              
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+        
+        <!-- Resources -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="liabary.html">Library</a></li>
+            <li><a class="dropdown-item" href="transport.html">Transport</a></li>
+            <li><a class="dropdown-item" href="free book.html">Free Books</a></li>
+           
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item"><a class="nav-link active" href="CONTACT.html">Contact Us</a></li>
+
+        <!-- Admission -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admission
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+
+            <!-- Introduction with Submenu -->
+            <li class="dropdown-submenu">
+              <div class="btn-group dropend">
+                <button type="button" class="btn ">
+                  Diploma Programs
+                </button>
+                <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropright</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- Dropdown menu links -->
+                </ul>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="How to apply.html">How to Apply</a></li>
+                <li><a class="dropdown-item" href="Admission criteria.html">Admission Criteria</a></li>
+                <li><a class="dropdown-item" href="fee structure.html">Fee Structure</a></li>
+                <li><a class="dropdown-item" href="select course programr.html">Application Form</a></li>
+              </ul>
+            </li>
+      
+        
+            <!-- Direct Link -->
+           
+          </ul>
+        </li>
+        
+      </ul>
+
+      <!-- User Auth Section -->
+      <div class="d-flex align-items-center ms-auto">
+        <!-- Logged In User -->
+        <div class="dropdown me-3" id="userLoggedIn" style="display: none;">
+          <button class="btn rounded-circle border-0" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="width: 40px; height: 40px; background-color: #343a40; color: white;">
+            <span id="loginuser" style="font-size: 0.9rem;">U</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            
+            <li><a class="dropdown-item" href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
+
+        <!-- Logged Out User -->
+        <div class="dropdown" id="userLoggedOut">
+          <button type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border: none; background: transparent;">
+            <i class="fa-solid fa-user-plus fs-4 text-light" style="margin-right: 40px;"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+            <li><a href="signup.html" class="dropdown-item text-center">Sign Up</a></li>
+            <li><a href="signin.html" class="dropdown-item text-center">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="container1" style="background-color: #c3c5c7;; margin-top: 200px;">
+    <div class="row1" style="gap: 20px;">
+        <div class="col-md-12">
+        <h1 style="text-align: center; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 90px;">Free Videos</h1>
+      </div>
+      </div>
+  </div>
+
+ 
+<section class="cards">
+    <!-- Card 1: Copperplate -->
+    <div class="card" data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic28.jpeg" alt="Copperplate Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Copperplate</h3>
+            <p>The Copperplate style is known for its delicate and graceful curves. Often used in formal documents and invitations.</p>
+            <p><strong>Fonts:</strong> Copperplate, Engrosser's Script</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/8vIgh8q8FEI?t=1964" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+
+    <!-- Card 2: Gothic -->
+    <div class="card" data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic29.jpeg" alt="Gothic Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Gothic</h3>
+            <p>The Gothic script is known for its strong, angular lines and dramatic impact. It's perfect for bold statements and historical themes.</p>
+            <p><strong>Fonts:</strong> Blackletter, Fraktur</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/X0SQrplVYaI?t=31" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+
+    <!-- Card 3: Modern Script -->
+    <div class="card" data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic30.jpeg" alt="Modern Script Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Modern Script</h3>
+            <p>Modern script is a free-flowing and fluid calligraphy style. It often combines cursive with a more casual look, making it popular for personal correspondence.</p>
+            <p><strong>Fonts:</strong> Brush Script, Allura</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/0FghwV2Wsik?t=169" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+
+    <!-- Card 4: Italic -->
+    <div class="card" data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic31.jpeg" alt="Italic Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Italic</h3>
+            <p>Italic calligraphy features flowing, slanted letters. It's a versatile style often used for invitations, letter writing, and greeting cards.</p>
+            <p><strong>Fonts:</strong> Italian Hand, Zapf Italic</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/mBCYQS7gRo4?t=187" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+
+    <!-- Card 5: Roman -->
+    <div class="card" data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic32.jpeg" alt="Roman Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Roman</h3>
+            <p>The Roman calligraphy style is characterized by its clean, simple strokes and is often used in inscriptions and formal settings.</p>
+            <p><strong>Fonts:</strong> Trajan, Times New Roman</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/jklAtL-ytfU?t=662" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+
+    <!-- Card 6: Brush Calligraphy -->
+    <div class="card"data-aos="fade-up"
+    data-aos-duration="3000">
+        <img src="img/pic33.jpeg" alt="Brush Calligraphy" class="card-image">
+        <div class="card-content">
+            <h3>Brush Calligraphy</h3>
+            <p>Brush calligraphy uses a brush pen to create bold and expressive strokes. It's great for contemporary designs and artistic projects.</p>
+            <p><strong>Fonts:</strong> Brush Script, Bickham Script Pro</p>
+            <div class="text-center mt-4">
+                <a href="https://youtu.be/Ya74JPIR69s?t=186" class="btn btn-primary btn-lg">Watch Now</a>
+              </div>
+        </div>
+    </div>
+</section>
+<!-- FOOTER -->
+<footer class="container-fluid bg-dark text-white mt-5 py-4" id="contaner4">
+  <div class="container">
+    <div class="row text-start">
+      <!-- About -->
+      <div class="col-12 col-md-3 mb-4">
+        <h3 style="color: rgb(192,2,2);">About</h3>
+        <p style="font-size: 16px;">
+          "Qalamkar School & College empowers students with quality education in calligraphy and fine arts. We foster creativity and innovation through experienced instructors and state-of-the-art facilities. Our mission is to help students achieve artistic excellence."
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-3 mb-4">
+        <h4 style="color: rgb(192,2,2);">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white" style="text-decoration: none;">Home</a></li>
+          <li><a href="principal message.html" class="text-white" style="text-decoration: none;">Principal Message</a></li>
+          <li><a href="mission vision .html" class="text-white" style="text-decoration: none;">Mission & Vision</a></li>
+          <li><a href="Administration.html" class="text-white" style="text-decoration: none;">Administration</a></li>
+          <li><a href="Faculty&Staff.html" class="text-white" style="text-decoration: none;">Faculty & Staff</a></li>
+          <li><a href="CONTACT.html" class="text-white" style="text-decoration: none;">Contact</a></li>
+          <li><a href="History.html" class="text-white" style="text-decoration: none;">History</a></li>
+          <li><a href="fee structure.html" class="text-white" style="text-decoration: none;">fee structure</a></li>
+          <li><a href="select course programr.html" class="text-white" style="text-decoration: none;">Application Form</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-6 col-md-3 mb-4">
+        <h4 style="color: rgb(192,2,2);">Resources</h4>
+        <ul class="list-unstyled">
+          <li><a href="transport.html" class="text-white" style="text-decoration: none;">Transport</a></li>
+          <li><a href="liabary.html" class="text-white" style="text-decoration: none;">Library</a></li>
+          <li><a href="free book.html" class="text-white" style="text-decoration: none;">Free Books</a></li>
+          <li><a href="Free videos.html" class="text-white" style="text-decoration: none;">Free videos</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-12 col-md-3 mb-4">
+        <h4 style="color: rgb(192,2,2);">Follow Us</h4>
+        <ul class="list-unstyled">
+          <li><a href="" class="text-white d-block" style="text-decoration: none;"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" class="text-white d-block" style="text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#" class="text-white d-block" style="text-decoration: none;"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+          <li><a href="https://www.youtube.com/@Qalamkarschoolandcollege" class="text-white d-block" style="text-decoration: none;"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Qalamkar School & College. All rights reserved.</p>
+      <p>Website created by <b>Dildar Raza /Assad Khan /j.Roger</b> (Students of Aptech Learning Korangi)</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+  <script src="jquery-3.7.1.min.js"></script>
+<script src="loginlogic.js"></script>
+<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  
+</script>
+</body>
+</html>
